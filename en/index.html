@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0e0416">
+<title>Ranin · Pitch (EN)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap">
+<style>
+html,body{margin:0;height:100%;height:100dvh;touch-action:manipulation;-webkit-tap-highlight-color:transparent;background:#0e0416;overflow:hidden;font-family:Archivo,Arial,sans-serif}
+#wrap{position:fixed;left:0;top:0;width:100%;height:100%;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:#2b0f3a}
+.sl{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;box-sizing:border-box;visibility:hidden}
+.sl.on{visibility:visible}
+.sl *{margin:0;box-sizing:border-box}
+.sl[style*="display:grid"],.sl[style*="display:flex"]{}
+#start{position:fixed;inset:0;background:#1a0826;color:#faf0e4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:9;cursor:pointer;text-align:center}
+#start h1{margin:0;font-size:72px;font-weight:900;text-transform:uppercase;letter-spacing:-2px}
+#start p{margin:0;font-size:20px;color:#ffd3e8}
+#start b{border:2px solid #ff4fa3;padding:14px 28px;font-size:20px;letter-spacing:3px;text-transform:uppercase}
+#hint{display:none;position:fixed;left:0;right:0;top:calc(50% + 28vw);text-align:center;color:#ffd3e8;font-size:15px;padding:0 24px;opacity:.8}
+#hud{position:fixed;right:16px;bottom:12px;z-index:5;display:flex;gap:12px;align-items:center;color:#faf0e4;font-size:14px;opacity:.35;transition:opacity .2s}
+#hud:hover{opacity:1}
+#hud button{background:#2b0f3acc;color:#faf0e4;border:1px solid #ff4fa3;padding:6px 10px;font:inherit;cursor:pointer}
+@media (pointer:coarse){#hud{opacity:1;gap:10px}#hud button{font-size:17px;padding:10px 16px;border-radius:4px}#hud span{font-size:16px}#start h1{font-size:48px}}
+@media (orientation:portrait){#start h1{font-size:40px;padding:0 20px}#start p{padding:0 28px;font-size:17px}#hint{display:block}#hud{left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));justify-content:space-between;opacity:1}#hud #fs{display:none}}
+@media (orientation:landscape) and (max-height:500px){#hud{right:8px;bottom:6px;opacity:.5}#hud button{padding:4px 8px;font-size:13px}#start h1{font-size:34px}#start{gap:12px}}
+</style></head><body>
+<div id="wrap"><div id="stage"><section class="sl" id="47fccaec" style="background:linear-gradient(180deg, #c4b7de 0%, #dcc6e4 50%, #eed2e3 100%)">
+  <img src="../assets/2569c31ad84a75207db2b2db53c5620b.jpg" alt="Two friends laughing with their arms raised against the sky" id="d7057cc3" style="position:absolute; top:0; left:555px; width:810px; height:1080px">
+  <div id="e6-2f3k0v" style="position:absolute; top:270px; left:50%; width:2500px; display:flex; flex-direction:column; align-items:center; padding:20px 0; background:#ff4fa3; transform:translateX(-50%) rotate(-6deg)">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:800; letter-spacing:6px; text-transform:uppercase; white-space:nowrap; color:#2b0f3a">✦ Thanks, but you don’t have to save us ✦</p>
+  </div>
+  <p id="af1d3115" style="position:absolute; top:511.08px; left:62.06px; width:440px; font-family:Archivo, Arial, sans-serif; font-size:26px; font-weight:800; line-height:1.3; letter-spacing:5px; text-transform:uppercase; color:#2b0f3a">A film by Sara Emara</p>
+  <p id="e14-2f3k0v" style="position:absolute; bottom:86px; left:0; width:1920px; font-family:Archivo, Arial, sans-serif; font-size:40px; font-weight:600; letter-spacing:1px; text-align:center; color:#2b0f3a">Every voice handed down grows</p>
+  <p id="5da5d80b" style="position:absolute; bottom:36px; left:40px; width:1840px; font-family:Archivo, Arial, sans-serif; font-size:20px; font-weight:500; letter-spacing:1px; text-align:center; text-transform:uppercase; color:#2b0f3a">Written and produced by Sara Emara · Directed and filmed by Sara Emara and Laura Pronestì · Unit publicist Aurora Rizzo · Editing [TBD]</p>
+  <p id="77dc7e5c" style="position:absolute; top:496.86px; left:1498.27px; width:357px; font-family:'Reem Kufi', Arial, sans-serif; font-size:40px; font-weight:500; line-height:1.2; text-align:right; color:#c2006a">فيلم لسارة عمارة</p>
+  <p id="629a6854" style="position:absolute; top:62.61px; left:50%; width:349px; font-family:Archivo, Arial, sans-serif; font-size:26px; font-weight:800; letter-spacing:8px; text-align:center; text-transform:uppercase; color:#2b0f3a; transform:translateX(-50%)">Coming soon</p>
+  <h1 id="e3-2f3k0v" style="position:absolute; bottom:140px; left:0; width:1920px; font-family:Archivo, Arial, sans-serif; font-size:340px; font-weight:900; line-height:0.8; letter-spacing:-15px; text-align:center; text-transform:uppercase; color:#2b0f3a">Ranin</h1>
+  <p id="62ff673b" style="position:absolute; top:459.79px; left:1098.3px; width:415.98px; height:270.96px; font-family:'Reem Kufi', Arial, sans-serif; font-size:300px; font-weight:700; line-height:1; text-align:right; color:#c2006a">رنين</p>
+</section><section class="sl" id="eco-radio" data-transition="fade" style="background:#2b0f3a">
+  <video src="../assets/4757aa7e1e1ad94f3167e6c63e062ee4.mp4" poster="../assets/75fa40578da6b668920d6241471b9e16.jpg" loop playsinline muted preload="auto" data-snd="1" style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; object-fit:cover; object-fit:cover"></video>
+  <div style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; background:linear-gradient(180deg, rgba(43,15,58,0.7) 0%, rgba(43,15,58,0) 30%, rgba(43,15,58,0) 50%, rgba(43,15,58,0.85) 100%)"></div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; padding-bottom:20px; border-bottom:3px solid #ff4fa3">
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:104px; font-weight:900; line-height:1; letter-spacing:-2px; color:#faf0e4">ranīn</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:400; color:#ffd3e8">/raˈniːn/ &nbsp;n.</p>
+    </div>
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px; direction:rtl">
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:104px; font-weight:700; line-height:1.1; color:#faf0e4">رَنين</p>
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:32px; font-weight:400; color:#ffd3e8">اسم</p>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:88px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; gap:64px">
+    <p style="width:900px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:800; line-height:1.2; letter-spacing:-0.5px; color:#faf0e4"><span style="color:#ff4fa3">1.</span> Days at the sea: the cassette spinning,<br>the echo of the waves that never stops.</p>
+    <p style="width:700px; white-space:nowrap; font-family:'Reem Kufi', Arial, sans-serif; font-size:46px; font-weight:600; line-height:1.45; text-align:right; direction:rtl; color:#faf0e4"><span style="color:#ff4fa3">١.</span> أيامُ البحر: الكاسيت يدور،<br>وصدى الموج لا ينقطع.</p>
+  </div>
+  
+</section><section class="sl" id="eco-tv" data-transition="fade" style="background:#2b0f3a">
+  <video src="../assets/ab270352ae5b557e18a634f8f5ad6f8f.mp4" poster="../assets/20c92a577ca512737c48448ec6253db0.jpg" loop playsinline muted preload="auto" data-snd="1" style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; object-fit:cover; object-fit:cover"></video>
+  <div style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; background:linear-gradient(180deg, rgba(43,15,58,0.7) 0%, rgba(43,15,58,0) 30%, rgba(43,15,58,0) 50%, rgba(43,15,58,0.85) 100%)"></div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; padding-bottom:20px; border-bottom:3px solid #ff4fa3">
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:104px; font-weight:900; line-height:1; letter-spacing:-2px; color:#faf0e4">ranīn</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:400; color:#ffd3e8">/raˈniːn/ &nbsp;n.</p>
+    </div>
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px; direction:rtl">
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:104px; font-weight:700; line-height:1.1; color:#faf0e4">رَنين</p>
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:32px; font-weight:400; color:#ffd3e8">اسم</p>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:88px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; gap:64px">
+    <p style="width:900px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:800; line-height:1.2; letter-spacing:-0.5px; color:#faf0e4"><span style="color:#ff4fa3">2.</span> The voices you heard as a child<br>and still hear today.</p>
+    <p style="width:700px; white-space:nowrap; font-family:'Reem Kufi', Arial, sans-serif; font-size:46px; font-weight:600; line-height:1.45; text-align:right; direction:rtl; color:#faf0e4"><span style="color:#ff4fa3">٢.</span> الأصواتُ التي سمعتِها وأنتِ صغيرة<br>وما زلتِ تسمعينها.</p>
+  </div>
+  
+</section><section class="sl" id="eco-zaghrouta" data-transition="fade" style="background:#2b0f3a">
+  <video src="../assets/627b9b5e2456425feef3988f11c2b261.mp4" poster="../assets/6f1891906fae7d8668982ed4add8f1eb.jpg" loop playsinline muted preload="auto" data-snd="1" style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; object-fit:cover; object-fit:cover"></video>
+  <div style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; background:linear-gradient(180deg, rgba(43,15,58,0.7) 0%, rgba(43,15,58,0) 30%, rgba(43,15,58,0) 50%, rgba(43,15,58,0.85) 100%)"></div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; padding-bottom:20px; border-bottom:3px solid #ff4fa3">
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:104px; font-weight:900; line-height:1; letter-spacing:-2px; color:#faf0e4">ranīn</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:400; color:#ffd3e8">/raˈniːn/ &nbsp;n.</p>
+    </div>
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px; direction:rtl">
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:104px; font-weight:700; line-height:1.1; color:#faf0e4">رَنين</p>
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:32px; font-weight:400; color:#ffd3e8">اسم</p>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:88px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; gap:64px">
+    <p style="width:900px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:800; line-height:1.2; letter-spacing:-0.5px; color:#faf0e4"><span style="color:#ff4fa3">3.</span> The sound of a celebration that stays<br>with you, even far from home.</p>
+    <p style="width:700px; white-space:nowrap; font-family:'Reem Kufi', Arial, sans-serif; font-size:46px; font-weight:600; line-height:1.45; text-align:right; direction:rtl; color:#faf0e4"><span style="color:#ff4fa3">٣.</span> صوتُ فرحٍ يبقى معكِ<br>حتى وأنتِ بعيدة عن البيت.</p>
+  </div>
+  
+</section><section class="sl" id="eco-risate" data-transition="fade" style="background:#2b0f3a">
+  <video src="../assets/457f82669ab7a29fe3630e408a49c4b2.mp4" poster="../assets/ff6d7662836cbe56bd35f06427573b5b.jpg" loop playsinline muted preload="auto" data-snd="1" style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; object-fit:cover; object-fit:cover"></video>
+  <div style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; background:linear-gradient(180deg, rgba(43,15,58,0.7) 0%, rgba(43,15,58,0) 30%, rgba(43,15,58,0) 50%, rgba(43,15,58,0.85) 100%)"></div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; padding-bottom:20px; border-bottom:3px solid #ff4fa3">
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:104px; font-weight:900; line-height:1; letter-spacing:-2px; color:#faf0e4">ranīn</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:400; color:#ffd3e8">/raˈniːn/ &nbsp;n.</p>
+    </div>
+    <div style="display:flex; flex-direction:row; align-items:baseline; gap:28px; direction:rtl">
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:104px; font-weight:700; line-height:1.1; color:#faf0e4">رَنين</p>
+      <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:32px; font-weight:400; color:#ffd3e8">اسم</p>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:88px; left:128px; width:1664px; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; gap:64px">
+    <p style="width:900px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:800; line-height:1.2; letter-spacing:-0.5px; color:#faf0e4"><span style="color:#ff4fa3">4.</span> The laughter of childhood friends,<br>still ringing in your ears.</p>
+    <p style="width:700px; white-space:nowrap; font-family:'Reem Kufi', Arial, sans-serif; font-size:46px; font-weight:600; line-height:1.45; text-align:right; direction:rtl; color:#faf0e4"><span style="color:#ff4fa3">٤.</span> ضحكاتُ صديقات الطفولة<br>ما زالت تَرِنّ في أذنَيك.</p>
+  </div>
+  
+</section><section class="sl" id="domande" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/005b18e058ab7e67d1798e81d9f80967.jpg" alt="A woman in a veil sitting at the window behind a curtain; outside, an apartment block with its windows" style="position:absolute; top:-70px; left:0; width:1178px; height:1472px; filter:brightness(1.05) contrast(1.15) grayscale(1)">
+  <div style="position:absolute; top:0; left:0; width:1398px; height:1080px; display:flex; flex-direction:column; background:#c2006a; mix-blend-mode:multiply">
+  </div>
+  <div style="position:absolute; top:0; left:1150px; width:770px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(90deg, #2b0f3a00 0%, #2b0f3a 36%)">
+  </div>
+  <div style="position:absolute; top:940px; left:0; width:1920px; height:140px; background:linear-gradient(0deg, #2b0f3af2 0%, #2b0f3a00 100%)"></div>
+  <div style="position:absolute; top:0; left:0; width:1920px; height:230px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3ae6 0%, #2b0f3a00 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Everyday questions</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">أسئلة كل يوم</p>
+  </div>
+  <p style="position:absolute; top:218px; left:455px; font-family:Archivo, Arial, sans-serif; font-size:54px; font-weight:800; line-height:1.19; letter-spacing:-0.5px; white-space:nowrap; color:#faf0e4; text-shadow:0 2px 18px #2b0f3a8c">“How do you dress in your country?”</p>
+  <p style="position:absolute; top:431px; left:404px; font-family:Archivo, Arial, sans-serif; font-size:54px; font-weight:800; line-height:1.19; letter-spacing:-0.5px; white-space:nowrap; color:#faf0e4; text-shadow:0 2px 18px #2b0f3a8c">“Are you married?”</p>
+  <p style="position:absolute; top:639px; left:458px; font-family:Archivo, Arial, sans-serif; font-size:54px; font-weight:800; line-height:1.19; letter-spacing:-0.5px; white-space:nowrap; color:#faf0e4; text-shadow:0 2px 18px #2b0f3a8c">“Do you feel more from here or from there?”</p>
+  <p style="position:absolute; top:853px; left:407px; font-family:Archivo, Arial, sans-serif; font-size:54px; font-weight:800; line-height:1.19; letter-spacing:-0.5px; white-space:nowrap; color:#faf0e4; text-shadow:0 2px 18px #2b0f3a8c">“You don’t look Italian, but where are you really from?”</p>
+  <p style="position:absolute; top:1020px; left:128px; font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:600; white-space:nowrap; color:#ffd3e8; text-shadow:0 0 12px #2b0f3ae6">Whoever asks is always convinced they’re the first.</p>
+  
+</section><section class="sl" id="logline" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/en_87ed509b.jpg" alt="Ranin poster stuck to a graffiti wall: the title, the logline and the Duomo of Milan" style="position:absolute; top:0; left:0; width:1920px; height:1080px; object-fit:cover">
+  <div style="position:absolute; top:880px; left:0; width:1920px; height:200px; display:flex; flex-direction:column; background:linear-gradient(0deg, #2b0f3ad9 0%, #2b0f3a00 100%)">
+  </div>
+  <p id="e5-1ixa43v" style="position:absolute; bottom:56px; left:128px; font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; color:#ffd3e8">RANIN · Pitch 2026</p>
+  
+</section><section class="sl" id="pressioni" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/625a621f1726ab88bc42ec481da2ca47.png" alt="The Milan skyline with the Porta Nuova skyscrapers fading, on the right, into the brick buildings of Cairo, at sunset" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:600px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3ae6 0%, #2b0f3ad1 55%, #2b0f3a00 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Two fronts</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">جبهتان</p>
+  </div>
+  <div style="position:absolute; top:200px; left:128px; width:760px; display:flex; flex-direction:column; gap:14px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:900; line-height:1.05; letter-spacing:-1px; color:#faf0e4">The empire of rights</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#f6e8f0">The outstretched hand in the name of “women’s rights” often seeks approval more than change. Women become stories to tell, preferably painful ones, enough to move people and make them feel on the right side. But when the story turns into a concrete request, that hand withdraws. There’s a spritz waiting.</p>
+  </div>
+  <div style="position:absolute; top:200px; left:1032px; width:760px; display:flex; flex-direction:column; gap:14px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:900; line-height:1.05; letter-spacing:-1px; color:#faf0e4">The guardians of order</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#f6e8f0">Regimes backed by the West set themselves up as guardians of morality, while schools, hospitals and justice fall behind. Social frustration is steered toward those who challenge the rules, and women often end up in the crosshairs. In public, virtue is defended; in private, what is condemned is practiced. Morality matters most when it serves to control others.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc7" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc7)"/></svg>
+  
+</section><section class="sl" id="generazioni" data-transition="fade" style="background:#2b0f3a">
+  <video src="../assets/0ec9d4a69ad4d1a2199a53d2967302e4.mp4" poster="../assets/e423980f6cb785de702691b364dc8401.jpg" loop playsinline muted preload="auto" style="position:absolute; top:0; left:0; width:1920px; height:1080px; object-fit:cover"></video>
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3ac7 0%, #2b0f3ab8 45%, #2b0f3ae0 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">We are not a generation number</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">لسنا رقمَ جيل</p>
+  </div>
+  <div style="position:absolute; top:420px; left:128px; width:1664px; display:grid; gap:96px; grid-template-columns:1fr 1fr 1fr">
+    <div style="display:flex; flex-direction:column; gap:14px">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:800; color:#faf0e4">The first to arrive</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:28px; line-height:1.4; color:#f1e3ee">A new language to learn, bureaucracy to face, qualifications that lose their value. She has to keep proving her abilities, often more than others, while trying to rebuild a network of relationships far from everything she knew.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:800; color:#faf0e4">Those born here</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:28px; line-height:1.4; color:#f1e3ee">She speaks several languages and moves across cultures and generations. Family and society seem to ask for opposite things, but sometimes end up imposing the same one: never being enough.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:800; color:#ff4fa3">What gets passed on (and what doesn’t)</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:28px; line-height:1.4; color:#f1e3ee">She looks for her roots, rediscovers them, questions them and reinvents them. She grows up among references that don’t always match, expectations that contradict each other and spaces of freedom still to be won. She doesn’t want to choose between two worlds. She wants to live in both without constantly having to justify who she is.</p>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc8" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc8)"/></svg>
+  
+</section><section class="sl" id="temi" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/5cb1de3fd0dbb4814ce29564dbf4e460.jpg" alt="White jasmine flowers" style="position:absolute; top:0; left:0; width:240px; height:1080px">
+  <img src="../assets/4b891223e56f511dffb426f54c2bfed6.jpg" alt="An open fig" style="position:absolute; top:0; left:240px; width:240px; height:1080px">
+  <img src="../assets/32f7bb461193f95ca8d6a29cf4203ad2.jpg" alt="Arabic bread cooked on the griddle" style="position:absolute; top:0; left:480px; width:240px; height:1080px">
+  <img src="../assets/edca04493156f43346a4c838bf2c18e8.jpg" alt="Dates" style="position:absolute; top:0; left:720px; width:240px; height:1080px">
+  <img src="../assets/e243c210d9969b5d311397c290d01542.jpg" alt="Green and black olives" style="position:absolute; top:0; left:960px; width:240px; height:1080px">
+  <img src="../assets/6ae179ba765b16c53180a8f16c4917ec.jpg" alt="Grilled corn on the cob" style="position:absolute; top:0; left:1200px; width:240px; height:1080px">
+  <img src="../assets/2bb881f28c67ffc63485c51f5adf1752.jpg" alt="Pomegranate seeds" style="position:absolute; top:0; left:1440px; width:240px; height:1080px">
+  <img src="../assets/9183670efadbbf2bdd1581d9aab0389e.jpg" alt="Mint leaves" style="position:absolute; top:0; left:1680px; width:240px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:260px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3ad9 0%, #2b0f3a00 100%)">
+  </div>
+  <div style="position:absolute; top:500px; left:0; width:1920px; height:580px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3a00 0%, #2b0f3adb 30%, #2b0f3af0 100%)">
+  </div>
+  <div style="position:absolute; top:640px; left:240px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:480px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:720px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:960px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:1200px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:1440px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:640px; left:1680px; width:2px; height:400px; display:flex; flex-direction:column; background:#faf0e459">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">What it’s about</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">عمّا يتحدّث</p>
+  </div>
+  <div style="position:absolute; top:660px; left:22px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Identity</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Like jasmine, the roots stay, but you can bloom elsewhere. Even when your own scent goes unrecognized.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:262px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Body</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Soft as a fig, desired and judged. A body everyone has something to say about, except the one who lives in it.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:502px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Languages</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Arabic and Italian mix like bread. Words contaminate each other, but sometimes they aren’t enough in either language.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:742px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Faith</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Sweet as the date that breaks the fast. Nourishment, memory or tradition. It is shared, discussed, not imposed.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:982px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Inheritance</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Like the olive tree, roots cross generations and borders. We inherit memories and traditions, but also silences and contradictions.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:1222px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Ambitions</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Like corn on the embers: it transforms, it burns, but it doesn’t go out. Not everyone starts with the same possibilities.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:1462px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Pleasure</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Enclosed, juicy, ready to burst. Female pleasure is multiple, intimate and not always willing to respect prohibitions.</p>
+  </div>
+  <div style="position:absolute; top:660px; left:1702px; width:198px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:900; line-height:1.05; color:#ff4fa3">Feminisms</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#faf0e4">Like mint: tear it out and it grows back stronger. It roots wherever it wants and ends up taking the whole garden.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc9" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc9)"/></svg>
+  
+</section><section class="sl" id="dati-corpo" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/en_700b4b2e.jpg" alt="Newspaper page in English and Arabic with the data: talent still remains outside the door (work and school) and where and why (violence and discrimination)" style="position:absolute; top:0px; left:0px; width:1920px; height:1080px; object-fit:cover">
+  
+</section><section class="sl" id="perche-milano" data-transition="fade" style="background:#2b0f3a">
+  <img src="../assets/bb2c260bd00adcb64be6fc18288ebbd5.jpg" alt="Blurred portrait of a woman with her hands on her face, necklace and bracelets shining" style="position:absolute; top:0; left:0; width:608px; height:1080px">
+  <div style="position:absolute; top:0; left:420px; width:240px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(90deg, #2b0f3a00 0%, #2b0f3a 80%)">
+  </div>
+  <div style="position:absolute; top:0; left:0; width:1920px; height:240px; display:flex; flex-direction:column; background:linear-gradient(180deg, #2b0f3acc 0%, #2b0f3a00 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Why Milan</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">لماذا ميلانو</p>
+  </div>
+  <div style="position:absolute; top:196px; left:700px; width:1092px; display:flex; flex-direction:column; gap:20px">
+    <h2 style="font-family:Archivo, Arial, sans-serif; font-size:60px; font-weight:900; line-height:0.95; letter-spacing:-2px; text-transform:uppercase; color:#faf0e4">And not another city</h2>
+    <div style="display:flex; flex-direction:column; gap:6px; padding:8px 0 0">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#ff4fa3">The city of those who arrive</h3>
+      <p style="font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.1; color:#f2b705">A crossroads of stories and belongings.</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; line-height:1.4; color:#f1e3ee">Milan welcomes those who come from abroad, from the South and from the provinces. Some stay, some leave again, some try to build a life. A multicultural city where opportunity, inequality and new forms of community coexist.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; padding:8px 0 0">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#ff4fa3">The city of image</h3>
+      <p style="font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.1; color:#f2b705">Where appearing matters almost as much as being.</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; line-height:1.4; color:#f1e3ee">Fashion, design, social media and the cult of image. In a city that celebrates individuality and emancipation, the female body is still subject to judgments, expectations and models to live up to.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; padding:8px 0 0">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#ff4fa3">The city of the night</h3>
+      <p style="font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.1; color:#f2b705">By day we work, by night we reinvent ourselves.</p>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; line-height:1.4; color:#f1e3ee">Between university, offices, precarious jobs and family responsibilities, the night opens other spaces. Music, clubs, encounters and relationships become chances to experiment with freedoms that find less room during the day.</p>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc11" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc11)"/></svg>
+  
+</section><section class="sl" id="target" data-transition="fade" style="background:#e9a840">
+  <img src="../assets/966e514b59882b5c964a01354ad1a35c.jpg" alt="" style="position:absolute; top:0; left:0; width:2320px; height:1480px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:#f2b85c77">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#2b0f3a">Who it’s for</p>
+    <p style="margin:0; font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#2b0f3a">لِمَن هو</p>
+  </div>
+  <p style="position:absolute; top:170px; left:128px; margin:0; font-family:Archivo, Arial, sans-serif; font-size:300px; font-weight:900; line-height:1; letter-spacing:-10px; color:#ffd88f">01</p>
+  <div style="position:absolute; top:228px; left:560px; width:900px; display:flex; flex-direction:column; gap:12px">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a0048">The diaspora</p>
+    <h3 style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:900; line-height:0.95; letter-spacing:-3px; text-transform:uppercase; color:#2b0f3a">Sees itself.</h3>
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.4; color:#2b0f3a">Those who live these things find themselves in it, and maybe feel a little less alone.</p>
+  </div>
+  <p style="position:absolute; top:500px; left:560px; margin:0; font-family:Archivo, Arial, sans-serif; font-size:300px; font-weight:900; line-height:1; letter-spacing:-10px; color:#ffd88f">02</p>
+  <div style="position:absolute; top:540px; left:1000px; width:792px; display:flex; flex-direction:column; gap:12px">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a0048">The outside gaze</p>
+    <h3 style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:72px; font-weight:900; line-height:0.95; letter-spacing:-2px; text-transform:uppercase; color:#2b0f3a">Questions.</h3>
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#2b0f3a">For those who think they already know what it means to be a woman. RANIN questions stereotypes and beliefs, showing a complexity that rarely finds space in the dominant narrative.</p>
+  </div>
+  <p style="position:absolute; top:920px; left:1000px; width:792px; margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:42px; font-style:italic; line-height:1.1; color:#2b0f3a">The goal: to get the complexity across. Not necessarily to resolve it.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc12" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc12)"/></svg>
+</section><section class="sl" id="valore" data-transition="fade" style="background:#faf0e4">
+  <img src="../assets/cd7e56bfab25be7f35a7350d846ca3c4.jpg" alt="Light marble with gold and mother-of-pearl inlays in a geometric star pattern" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(180deg, #faf0e473 0%, #faf0e4cc 38%, #faf0e4f0 52%, #faf0e4f0 92%, #faf0e4cc 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#2b0f3a">Why Ranin</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#2b0f3a">لماذا رنين</p>
+  </div>
+  <p style="position:absolute; top:212px; left:128px; width:1500px; font-family:'Instrument Serif', Georgia, serif; font-size:84px; font-style:italic; line-height:1.05; color:#2b0f3a">Not a film about the women of the diaspora.<br><span style="color:#c2006a">A film by the women of the diaspora.</span></p>
+  <div style="position:absolute; top:520px; left:128px; width:1664px; display:grid; gap:72px; grid-template-columns:1fr 1fr 1fr">
+    <div style="display:flex; flex-direction:column; gap:12px; padding:22px 0 0">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a0048">The gaze</p>
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:38px; font-weight:900; line-height:1.1; color:#2b0f3a">Belonging is never just one.</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#2b0f3a">Between colonial legacies, class differences and family memories, identities are built, contradict themselves and transform. Without having to choose just one part of oneself.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; padding:22px 0 0">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a0048">The form</p>
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:38px; font-weight:900; line-height:1.1; color:#2b0f3a">Contradiction is life.</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#2b0f3a">Across generations, languages and different ways of understanding freedom. Irony runs through the conflicts, habits and contradictions of women who are not trying to be a role model.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; padding:22px 0 0">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a0048">The impact</p>
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:38px; font-weight:900; line-height:1.1; color:#2b0f3a">To exist without having to explain oneself.</h3>
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; line-height:1.4; color:#2b0f3a">To recognize oneself in complexity, without having to justify it. To question the hierarchies that decide which voices count, which stories deserve space and who gets to tell them.</p>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc13" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc13)"/></svg>
+</section><section class="sl" id="protagoniste" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/2cbefa665a29e58ed015c5e448cb8ec4.jpg" alt="A group of women and young people in discussion in a bright studio" style="position:absolute; top:0; left:0; width:640px; height:1080px">
+  <img src="../assets/en_6e372862.jpg" alt="Women painting together around a long table" style="position:absolute; top:0; left:640px; width:640px; height:1080px">
+  <img src="../assets/f0cd7d6e7f94015f679f456b07dfe258.jpg" alt="A woman laughs out loud while mixing dough in a kitchen" style="position:absolute; top:0; left:1280px; width:640px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; background:linear-gradient(180deg, #1a0826e6 0%, #1a082699 12%, #1a082600 24%, #1a082600 36%, #1a0826cc 50%, #1a0826f2 62%, #1a0826 80%, #1a0826 100%)"></div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">The protagonists</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">البطلات</p>
+  </div>
+  <h2 style="position:absolute; top:480px; left:128px; width:1664px; font-family:Archivo, Arial, sans-serif; font-size:104px; font-weight:900; line-height:0.95; letter-spacing:-3px; text-transform:uppercase; color:#faf0e4">From the collective<br><span style="color:#ff4fa3">Dardashe</span></h2>
+  <p style="position:absolute; top:748px; left:64px; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">01</p>
+  <p style="position:absolute; top:790px; left:64px; width:506px; font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#faf0e4">Dardashe is a feminist collective of women of the diaspora, based in Milan and active across the rest of Italy. It organizes meetings, workshops, events and cultural and artistic initiatives.</p>
+  <p style="position:absolute; top:748px; left:704px; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">02</p>
+  <p style="position:absolute; top:790px; left:704px; width:506px; font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#faf0e4">The possible protagonists of RANIN are part of this community. Women of different ages, professions and paths, each with her own relationship to her origins, family and everyday life.</p>
+  <p style="position:absolute; top:748px; left:1344px; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">03</p>
+  <p style="position:absolute; top:790px; left:1344px; width:506px; font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#faf0e4">The documentary will follow some of them beyond the collective’s meetings, in the places and relationships that are part of their lives.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Cross-stitch decorative band" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc14" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc14)"/></svg>
+</section><section class="sl" id="metodo" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/a21e511880f19134455a6467d0aa4e3e.jpg" alt="Shadow of hands with rings rising on a magenta wall, above the folds of a fabric" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1300px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(90deg, #1a0826b3 0%, #1a082699 70%, #1a082600 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">First, we get to know each other</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">أولًا نتعارف</p>
+  </div>
+  <div style="position:absolute; top:240px; left:128px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">01</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">Relationship first</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">The camera comes later, once there is trust.<br>It takes time.</p>
+  </div>
+  <div style="position:absolute; top:240px; left:672px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">02</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">Everyone decides</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">What to tell, what not to, and when.</p>
+  </div>
+  <div style="position:absolute; top:476px; left:128px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">03</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">No mandatory questions</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">If you don’t want to say something, you don’t.</p>
+  </div>
+  <div style="position:absolute; top:476px; left:672px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">04</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">Even without a face</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">Only the voice, from behind, the hands, or in animation.</p>
+  </div>
+  <div style="position:absolute; top:712px; left:128px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">05</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">No one left out</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">Those who speak little Italian speak in their own language. Those afraid of exposing themselves decide how to be there.</p>
+  </div>
+  <div style="position:absolute; top:712px; left:672px; width:480px; display:flex; flex-direction:column; gap:10px; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:2px; color:#f2b705">06</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:34px; font-weight:900; line-height:1.1; color:#faf0e4">No captions</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">We let them express themselves in their own words.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc15" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc15)"/></svg>
+</section><section class="sl" id="struttura" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/d36f271f263a265b641f78949ce20dae.jpg" alt="Three young women embracing, looking into the camera, against a dusty pink backdrop" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:64px; left:860px; width:932px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Three movements</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">ثلاث حركات</p>
+  </div>
+  <p style="position:absolute; top:206px; left:860px; font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:900; line-height:1; letter-spacing:-3px; color:#f2b705">I</p>
+  <div style="position:absolute; top:212px; left:1060px; width:732px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:40px; font-weight:900; line-height:1.1; color:#faf0e4">Life</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">Everyday gestures, passions, friendships, music and desires. The protagonists tell their stories through what they do, what they love and the way they inhabit the world.</p>
+  </div>
+  <p style="position:absolute; top:474px; left:860px; font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:900; line-height:1; letter-spacing:-3px; color:#f2b705">II</p>
+  <div style="position:absolute; top:480px; left:1060px; width:732px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:40px; font-weight:900; line-height:1.1; color:#faf0e4">Expectations</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">Family conventions, generational conflicts and class differences intertwine with racism, exoticization and the expectations of emancipation of Western society. Freedom is called into question by both sides.</p>
+  </div>
+  <p style="position:absolute; top:742px; left:860px; font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:900; line-height:1; letter-spacing:-3px; color:#f2b705">III</p>
+  <div style="position:absolute; top:748px; left:1060px; width:732px; display:flex; flex-direction:column; gap:10px">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:40px; font-weight:900; line-height:1.1; color:#faf0e4">The space we make</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:25px; line-height:1.4; color:#e9d8e6">Differences become occasions for clashes, irony, complicity and solidarity. No one claims to represent everyone. Each builds her own space, opening it to those who come after.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc16" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc16)"/></svg>
+</section><section class="sl" id="visivo" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/9672ded2b20d78a0f4294e73ea57b458.jpg" alt="Close-up of a face with closed eyes, marked by sun shadows and large gold earrings" style="position:absolute; top:0; left:0; width:634px; height:1080px">
+  <img src="../assets/c706381b0fca868456b63211d86b6b7c.jpg" alt="A girl in a floral scarf puts on makeup in front of a round mirror, against a stone wall" style="position:absolute; top:0; left:643px; width:634px; height:1080px">
+  <img src="../assets/01e560310032d21a287ca7f856093152.jpg" alt="An olive branch in a vase in front of a terracotta wall, with the shadows of the leaves" style="position:absolute; top:0; left:1286px; width:634px; height:1080px">
+  <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(180deg, #1a0826cc 0%, #1a082640 18%, #1a082600 32%, #1a082666 44%, #1a0826b3 54%, #1a0826e6 64%, #1a0826 80%, #1a0826 100%)">
+  </div>
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Visual language</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">اللغة البصرية</p>
+  </div>
+  <h2 style="position:absolute; top:452px; left:128px; width:1664px; font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:900; line-height:0.95; letter-spacing:-3px; text-transform:uppercase; color:#faf0e4">How we <span style="color:#ff4fa3">shoot it</span></h2>
+  <div style="position:absolute; top:590px; left:64px; width:506px; display:flex; flex-direction:column; gap:8px">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Light</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:36px; font-weight:900; line-height:1.1; color:#faf0e4">The light of places, of people.</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:23px; line-height:1.4; color:#f1e3ee">Natural light, shadows on faces, home interiors and streets. Without chasing an exotic or idealized aesthetic.</p>
+  </div>
+  <div style="position:absolute; top:590px; left:707px; width:506px; display:flex; flex-direction:column; gap:8px">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Camera</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:36px; font-weight:900; line-height:1.1; color:#faf0e4">Close, without intruding.</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:23px; line-height:1.4; color:#f1e3ee">The camera observes, takes part and leaves room. In everyday gestures, glances, conversations and silences.&nbsp;</p>
+  </div>
+  <div style="position:absolute; top:590px; left:1350px; width:506px; display:flex; flex-direction:column; gap:8px">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Color</p>
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:36px; font-weight:900; line-height:1.1; color:#faf0e4">The colors of everyday life.</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:23px; line-height:1.4; color:#f1e3ee">Fabrics, walls, objects, plants and city lights. A living palette, between warm tones and pop colors, without reducing cultural identity to a recognizable aesthetic.</p>
+  </div>
+  <div style="position:absolute; top:880px; left:128px; width:800px; display:flex; flex-direction:column; gap:6px; padding:16px 0 0; border-top:2px solid #ff4fa3">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:28px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#ff4fa3">Yes</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:23px; line-height:1.4; color:#faf0e4">Lived-in homes, bodies in motion, everyday details, music, overlapping languages and spontaneous moments. Mess, irony and imperfection have room too.</p>
+  </div>
+  <div style="position:absolute; top:880px; left:992px; width:800px; display:flex; flex-direction:column; gap:6px; padding:16px 0 0; border-top:2px solid #f2b705">
+    <h3 style="font-family:Archivo, Arial, sans-serif; font-size:28px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#f2b705">No</h3>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:23px; line-height:1.4; color:#faf0e4">Staged folklore, cultural symbols added as decoration, images of women reduced to victims or heroines. No pursuit of the exotic to satisfy the viewer’s gaze.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc17" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc17)"/></svg>
+  
+</section><section class="sl" id="mood" data-transition="fade" style="background:#1a0826">
+  <div style="position:absolute; top:82px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 12px; border-bottom:3px solid #ff4fa3">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:52px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Mood <span style="color:#ff4fa3">· Ranin</span></p>
+    <p style="margin:0; font-family:'Reem Kufi', Arial, sans-serif; font-size:52px; font-weight:700; line-height:1.2; color:#faf0e4">الأجواء · رنين</p>
+  </div>
+  <img src="../assets/e8f5ab42e286ae9e35cb56d4e377b45b.jpg" alt="Two friends in a room full of posters" style="position:absolute; top:178px; left:0px; width:468px; height:340px">
+  <img src="../assets/48329694d2de6ecb0bd4c8970d62225e.jpg" alt="Close-up of two young women, one with a yellow flower" style="position:absolute; top:178px; left:476px; width:472px; height:340px">
+  <img src="../assets/6e99819b02460bc82cd64b7313b1be47.jpg" alt="Three friends laughing among cushions and sheets" style="position:absolute; top:178px; left:956px; width:471px; height:340px">
+  <img src="../assets/6f8a7e007bfb3cc699bda2b32e0f7d5e.jpg" alt="Friends lying on a rooftop in the evening, with cigarettes and raised hands" style="position:absolute; top:178px; left:1435px; width:485px; height:340px">
+  <img src="../assets/4e7b099712747f6d644350be0ed4ca09.jpg" alt="Friends dancing in a club" style="position:absolute; top:526px; left:0px; width:322px; height:432px">
+  <img src="../assets/f04cb35ead8671ae60e75257de600ec1.jpg" alt="Legs crossed by the shadow of a cane chair" style="position:absolute; top:526px; left:330px; width:301px; height:432px">
+  <img src="../assets/34920de026188e21857a8a5178a225ad.jpg" alt="A cat asleep in front of a book stall" style="position:absolute; top:526px; left:639px; width:226px; height:432px">
+  <img src="../assets/509997b964edaf1eacbc8624ece7cf13.jpg" alt="Two people walking hand in hand, in motion" style="position:absolute; top:526px; left:873px; width:268px; height:432px">
+  <img src="../assets/41c362f2848f3cb12ac2a79cdb6fce09.jpg" alt="Pomegranate, orange and lemon on a red rug, with a book on Frida Kahlo" style="position:absolute; top:526px; left:1149px; width:321px; height:432px">
+  <img src="../assets/e3e7ea24d727808be2f9705316ed785e.jpg" alt="Friends on a shopping cart at sunset" style="position:absolute; top:526px; left:1478px; width:442px; height:432px">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc18" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc18)"/></svg>
+  
+</section><section class="sl" id="tono" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/769b286dc61974bf63ff68a61471af23.jpg" alt="A Mona Lisa with the face of an elderly woman smoking, in pink tones" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">How we speak</p>
+    <p style="margin:0; font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">نبرة الصوت</p>
+  </div>
+  <p style="position:absolute; top:196px; left:128px; width:780px; margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:76px; font-style:italic; line-height:1.05; color:#ff4fa3">Pink irony:<br>elegant but cheeky.</p>
+  <div style="position:absolute; top:430px; left:128px; width:780px; display:flex; flex-direction:column">
+    <div style="display:flex; flex-direction:row; gap:40px; padding:0 0 12px">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f2b705">We say</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f2b705">We don’t say</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">her name</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">“the girl in the veil”</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">how she wants to present herself</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">victims, heroines</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">lives in Milan</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">“she has integrated”</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">she chose</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">she’s forced, she’s been freed</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">she changed her mind</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">she’s inconsistent</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:40px; padding:11px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:340px; font-family:Archivo, Arial, sans-serif; font-size:27px; font-weight:700; color:#faf0e4">we listen</p>
+      <p style="margin:0; width:360px; font-family:Archivo, Arial, sans-serif; font-size:27px; color:#f6c3dc; text-decoration:line-through; text-decoration-color:#ff4fa3">“we give a voice”</p>
+    </div>
+  </div>
+  <p style="position:absolute; top:900px; left:128px; width:780px; margin:0; font-family:Archivo, Arial, sans-serif; font-size:27px; line-height:1.4; color:#faf0e4">We are not looking for exemplary women. We tell the stories of real women, even when they shake our certainties.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc19" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc19)"/></svg>
+  
+</section><section class="sl" id="riferimenti" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/1ff2d0d9c428ace9a6e74b4cc8f29c9d.jpg" alt="Six film posters on a strip of film, with perforations" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">Films we speak with</p>
+    <p style="margin:0; font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">أفلام نتحدث معها</p>
+  </div>
+  <p style="position:absolute; top:170px; left:128px; width:1664px; margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:44px; font-style:italic; color:#f2b705">Mothers, daughters, grandmothers: women telling their own stories.</p>
+  <div style="position:absolute; top:724px; left:128px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">Four Daughters</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">Ben Hania, 2023</p>
+  </div>
+  <div style="position:absolute; top:724px; left:411px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">Bye Bye Tiberias</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">Soualem, 2023</p>
+  </div>
+  <div style="position:absolute; top:724px; left:694px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">The Mother of All Lies</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">El Moudir, 2023</p>
+  </div>
+  <div style="position:absolute; top:724px; left:976px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">The Little One</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">Herzi, 2025</p>
+  </div>
+  <div style="position:absolute; top:724px; left:1259px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">Amreeka</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">Dabis, 2009</p>
+  </div>
+  <div style="position:absolute; top:724px; left:1542px; width:250px">
+    <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:36px; font-style:italic; line-height:1.05; color:#ff4fa3">Fatima</p>
+    <p style="margin:8px 0 0; font-family:Archivo, Arial, sans-serif; font-size:22px; color:#d9c6dc">Faucon, 2015</p>
+  </div>
+  <p style="position:absolute; top:900px; left:128px; width:1100px; margin:0; font-family:Archivo, Arial, sans-serif; font-size:27px; line-height:1.4; color:#faf0e4">Families, migration, irony and dignity. We watch them to learn what not to explain.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc20" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc20)"/></svg>
+  
+</section><section class="sl" id="autrice" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/f0f4c9bce5ee7ab20eb05771113894ca.jpg" alt="Portrait of Sara Emara, eyes lowered, with a castle behind her" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">The author</p>
+    <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">المؤلفة</p>
+  </div>
+  <p style="position:absolute; top:190px; left:128px; width:984.74px; font-family:Archivo, Arial, sans-serif; font-size:112px; font-weight:900; line-height:0.92; letter-spacing:-4px; text-transform:uppercase; color:#faf0e4">Sara<br>Emara</p>
+  <p style="position:absolute; top:430px; left:128px; width:700px; font-family:Archivo, Arial, sans-serif; font-size:28px; line-height:1.4; color:#faf0e4">Italian-Egyptian, raised and trained in Cairo, part of the diaspora in Italy. A member of the feminist collective Dardashe.</p>
+  <p style="position:absolute; top:560px; left:128px; width:700px; font-family:'Instrument Serif', Georgia, serif; font-size:50px; font-style:italic; line-height:1.08; color:#ffe2be">Too Italian in Egypt, too Egyptian in Italy. And yet, in both places, I am at home.</p>
+  <div style="position:absolute; top:730px; left:128px; width:780px; display:flex; flex-direction:column; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">In Egypt</p>
+    <p style="font-family:'Instrument Serif', Georgia, serif; font-size:44px; font-style:italic; line-height:1.05; color:#faf0e4">The privilege of also being Italian.</p>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; line-height:1.42; color:#eadbe8">I grew up here and I know the language, and I had to bend to the rules of society. A society with its own problems, in which I was nonetheless privileged: my Italian passport gave me a status that not everyone has. I belong to this place, but I don’t live under the same conditions.</p>
+  </div>
+  <div style="position:absolute; top:730px; left:1012px; width:780px; display:flex; flex-direction:column; padding:18px 0 0">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#ff4fa3">In Italy</p>
+    <p style="font-family:'Instrument Serif', Georgia, serif; font-size:44px; font-style:italic; line-height:1.05; color:#faf0e4">Belonging can’t be taken for granted.</p>
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; line-height:1.42; color:#eadbe8">I was born here and I speak the language, but I studied and grew up in Egypt. I don’t share many of the cultural references of those who grew up in Italy, and I had to fight to be taken seriously, to prove my abilities and to win a space.</p>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc21" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc21)"/></svg>
+  
+</section><section class="sl" id="scheda" data-transition="fade" style="background:#1a0826">
+  <img src="../assets/f4c2bff812ebef5c7db66a5b1de8ddf5.jpg" alt="A bird in flight, blurred, in orange and pink light" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
+  <div style="position:absolute; top:64px; left:128px; width:1664px; display:flex; flex-direction:row; align-items:end; justify-content:space-between; padding:0 0 20px; border-bottom:3px solid #ff4fa3">
+    <p style="margin:0; font-family:Archivo, Arial, sans-serif; font-size:56px; font-weight:900; line-height:1.1; letter-spacing:-1px; color:#faf0e4">The project</p>
+    <p style="margin:0; font-family:'Reem Kufi', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.2; color:#faf0e4">المشروع</p>
+  </div>
+  <div style="position:absolute; top:210px; left:128px; width:860px; display:flex; flex-direction:column">
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Genre</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">Documentary</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Running time</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">90 min</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Languages</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">Arabic, English and Italian, subtitled</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Location</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">Milan</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Protagonists</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">Women of the Dardashe collective and of other generations</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Status</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">Development: first meetings</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Shooting</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">From October</p>
+    </div>
+    <div style="display:flex; flex-direction:row; gap:32px; padding:15px 0; border-top:1px solid #ff4fa380">
+      <p style="margin:0; width:290px; white-space:nowrap; font-family:Archivo, Arial, sans-serif; font-size:22px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#f2b705">Budget</p>
+      <p style="margin:0; width:538px; font-family:Archivo, Arial, sans-serif; font-size:30px; line-height:1.25; color:#faf0e4">[€ __]</p>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 40" style="position:absolute; bottom:0; left:0; width:1920px; height:40px"><defs><pattern id="pc22" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2B0F3A"/><path d="M20 4 L36 20 L20 36 L4 20 Z" fill="none" stroke="#F2B705" stroke-width="3"/><path d="M20 13 L27 20 L20 27 L13 20 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="40" fill="url(#pc22)"/></svg>
+  
+</section><section class="sl" id="chiusura" data-transition="fade" style="background:#c2006a">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Illustrazione: una voce al centro da cui si allargano cerchi di rombi ricamati, sempre più grandi" viewBox="0 0 1920 1080" id="cfe31884" style="position:absolute; top:50%; left:50%; width:1920px; height:1080px; opacity:0.24; transform:translate(-50%, -50%)"><rect width="1920" height="1080" fill="#C2006A"/><circle cx="960" cy="600" r="80" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1039 605L1045 611L1039 617L1033 611Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1031 630L1037 636L1031 642L1025 636Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1016 652L1022 658L1016 664L1010 658Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M994 666L1000 672L994 678L988 672Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M968 674L974 680L968 686L962 680Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M942 672L948 678L942 684L936 678Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M918 662L924 668L918 674L912 668Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M898 645L904 651L898 657L892 651Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M885 622L891 628L885 634L879 628Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M880 596L886 602L880 608L874 602Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M884 570L890 576L884 582L878 576Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M896 546L902 552L896 558L890 552Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M915 528L921 534L915 540L909 534Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M939 517L945 523L939 529L933 523Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M965 514L971 520L965 526L959 520Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M990 520L996 526L990 532L984 526Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1013 534L1019 540L1013 546L1007 540Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1029 554L1035 560L1029 566L1023 560Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1039 579L1045 585L1039 591L1033 585Z" fill="#FAF0E4" fill-opacity="0.5"/><circle cx="960" cy="600" r="170" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1130 602L1139 611L1130 620L1121 611Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1123 639L1132 648L1123 657L1114 648Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1108 674L1117 683L1108 692L1099 683Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1086 705L1095 714L1086 723L1077 714Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1057 730L1066 739L1057 748L1048 739Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1024 749L1033 758L1024 767L1015 758Z" fill="#F2B705" fill-opacity="0.5"/><path d="M987 759L996 768L987 777L978 768Z" fill="#F2B705" fill-opacity="0.5"/><path d="M949 761L958 770L949 779L940 770Z" fill="#F2B705" fill-opacity="0.5"/><path d="M912 754L921 763L912 772L903 763Z" fill="#F2B705" fill-opacity="0.5"/><path d="M877 739L886 748L877 757L868 748Z" fill="#F2B705" fill-opacity="0.5"/><path d="M846 717L855 726L846 735L837 726Z" fill="#F2B705" fill-opacity="0.5"/><path d="M821 688L830 697L821 706L812 697Z" fill="#F2B705" fill-opacity="0.5"/><path d="M802 655L811 664L802 673L793 664Z" fill="#F2B705" fill-opacity="0.5"/><path d="M792 618L801 627L792 636L783 627Z" fill="#F2B705" fill-opacity="0.5"/><path d="M790 580L799 589L790 598L781 589Z" fill="#F2B705" fill-opacity="0.5"/><path d="M797 543L806 552L797 561L788 552Z" fill="#F2B705" fill-opacity="0.5"/><path d="M812 508L821 517L812 526L803 517Z" fill="#F2B705" fill-opacity="0.5"/><path d="M834 477L843 486L834 495L825 486Z" fill="#F2B705" fill-opacity="0.5"/><path d="M863 452L872 461L863 470L854 461Z" fill="#F2B705" fill-opacity="0.5"/><path d="M896 433L905 442L896 451L887 442Z" fill="#F2B705" fill-opacity="0.5"/><path d="M933 423L942 432L933 441L924 432Z" fill="#F2B705" fill-opacity="0.5"/><path d="M971 421L980 430L971 439L962 430Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1008 428L1017 437L1008 446L999 437Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1043 443L1052 452L1043 461L1034 452Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1074 465L1083 474L1074 483L1065 474Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1099 494L1108 503L1099 512L1090 503Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1118 527L1127 536L1118 545L1109 536Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1128 564L1137 573L1128 582L1119 573Z" fill="#F2B705" fill-opacity="0.5"/><circle cx="960" cy="600" r="280" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1240 588L1252 600L1240 612L1228 600Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1235 639L1247 651L1235 663L1223 651Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1221 689L1233 701L1221 713L1209 701Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1198 735L1210 747L1198 759L1186 747Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1167 777L1179 789L1167 801L1155 789Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1129 811L1141 823L1129 835L1117 823Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1085 839L1097 851L1085 863L1073 851Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1037 857L1049 869L1037 881L1025 869Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M986 867L998 879L986 891L974 879Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M934 867L946 879L934 891L922 879Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M883 857L895 869L883 881L871 869Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M835 839L847 851L835 863L823 851Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M791 811L803 823L791 835L779 823Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M753 777L765 789L753 801L741 789Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M722 735L734 747L722 759L710 747Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M699 689L711 701L699 713L687 701Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M685 639L697 651L685 663L673 651Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M680 588L692 600L680 612L668 600Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M685 537L697 549L685 561L673 549Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M699 487L711 499L699 511L687 499Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M722 441L734 453L722 465L710 453Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M753 399L765 411L753 423L741 411Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M791 365L803 377L791 389L779 377Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M835 337L847 349L835 361L823 349Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M883 319L895 331L883 343L871 331Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M934 309L946 321L934 333L922 321Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M986 309L998 321L986 333L974 321Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1037 319L1049 331L1037 343L1025 331Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1085 337L1097 349L1085 361L1073 349Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1129 365L1141 377L1129 389L1117 377Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1167 399L1179 411L1167 423L1155 411Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1198 441L1210 453L1198 465L1186 453Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1221 487L1233 499L1221 511L1209 499Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1235 537L1247 549L1235 561L1223 549Z" fill="#FF4FA3" fill-opacity="0.5"/><circle cx="960" cy="600" r="410" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1368 622L1383 637L1368 652L1353 637Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1358 685L1373 700L1358 715L1343 700Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1337 746L1352 761L1337 776L1322 761Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1307 803L1322 818L1307 833L1292 818Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1269 855L1284 870L1269 885L1254 870Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1223 900L1238 915L1223 930L1208 915Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1170 937L1185 952L1170 967L1155 952Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1113 966L1128 981L1113 996L1098 981Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1051 985L1066 1000L1051 1015L1036 1000Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M988 994L1003 1009L988 1024L973 1009Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M923 993L938 1008L923 1023L908 1008Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M860 983L875 998L860 1013L845 998Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M799 962L814 977L799 992L784 977Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M742 932L757 947L742 962L727 947Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M690 894L705 909L690 924L675 909Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M645 848L660 863L645 878L630 863Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M608 795L623 810L608 825L593 810Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M579 738L594 753L579 768L564 753Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M560 676L575 691L560 706L545 691Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M551 613L566 628L551 643L536 628Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M552 548L567 563L552 578L537 563Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M562 485L577 500L562 515L547 500Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M583 424L598 439L583 454L568 439Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M613 367L628 382L613 397L598 382Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M651 315L666 330L651 345L636 330Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M697 270L712 285L697 300L682 285Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M750 233L765 248L750 263L735 248Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M807 204L822 219L807 234L792 219Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M869 185L884 200L869 215L854 200Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M932 176L947 191L932 206L917 191Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M997 177L1012 192L997 207L982 192Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1060 187L1075 202L1060 217L1045 202Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1121 208L1136 223L1121 238L1106 223Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1178 238L1193 253L1178 268L1163 253Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1230 276L1245 291L1230 306L1215 291Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1275 322L1290 337L1275 352L1260 337Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1312 375L1327 390L1312 405L1297 390Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1341 432L1356 447L1341 462L1326 447Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1360 494L1375 509L1360 524L1345 509Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1369 557L1384 572L1369 587L1354 572Z" fill="#2B0F3A" fill-opacity="0.5"/><circle cx="960" cy="600" r="560" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1520 582L1538 600L1520 618L1502 600Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1515 658L1533 676L1515 694L1497 676Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1499 733L1517 751L1499 769L1481 751Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1474 805L1492 823L1474 841L1456 823Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1438 873L1456 891L1438 909L1420 891Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1394 935L1412 953L1394 971L1376 953Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1342 991L1360 1009L1342 1027L1324 1009Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1283 1040L1301 1058L1283 1076L1265 1058Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1218 1079L1236 1097L1218 1115L1200 1097Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M702 1079L720 1097L702 1115L684 1097Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M637 1040L655 1058L637 1076L619 1058Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M578 991L596 1009L578 1027L560 1009Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M526 935L544 953L526 971L508 953Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M482 873L500 891L482 909L464 891Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M446 805L464 823L446 841L428 823Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M421 733L439 751L421 769L403 751Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M405 658L423 676L405 694L387 676Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M400 582L418 600L400 618L382 600Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M405 506L423 524L405 542L387 524Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M421 431L439 449L421 467L403 449Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M446 359L464 377L446 395L428 377Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M482 291L500 309L482 327L464 309Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M526 229L544 247L526 265L508 247Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M578 173L596 191L578 209L560 191Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M637 124L655 142L637 160L619 142Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M702 85L720 103L702 121L684 103Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M772 54L790 72L772 90L754 72Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M846 34L864 52L846 70L828 52Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M922 23L940 41L922 59L904 41Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M998 23L1016 41L998 59L980 41Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1074 34L1092 52L1074 70L1056 52Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1148 54L1166 72L1148 90L1130 72Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1218 85L1236 103L1218 121L1200 103Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1283 124L1301 142L1283 160L1265 142Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1342 173L1360 191L1342 209L1324 191Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1394 229L1412 247L1394 265L1376 247Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1438 291L1456 309L1438 327L1420 309Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1474 359L1492 377L1474 395L1456 377Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1499 431L1517 449L1499 467L1481 449Z" fill="#FAF0E4" fill-opacity="0.5"/><path d="M1515 506L1533 524L1515 542L1497 524Z" fill="#FAF0E4" fill-opacity="0.5"/><circle cx="960" cy="600" r="730" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1690 604L1711 625L1690 646L1669 625Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1681 692L1702 713L1681 734L1660 713Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1662 778L1683 799L1662 820L1641 799Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1633 861L1654 882L1633 903L1612 882Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1594 940L1615 961L1594 982L1573 961Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1546 1014L1567 1035L1546 1056L1525 1035Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1489 1082L1510 1103L1489 1124L1468 1103Z" fill="#F2B705" fill-opacity="0.5"/><path d="M397 1044L418 1065L397 1086L376 1065Z" fill="#F2B705" fill-opacity="0.5"/><path d="M345 973L366 994L345 1015L324 994Z" fill="#F2B705" fill-opacity="0.5"/><path d="M302 896L323 917L302 938L281 917Z" fill="#F2B705" fill-opacity="0.5"/><path d="M269 814L290 835L269 856L248 835Z" fill="#F2B705" fill-opacity="0.5"/><path d="M246 729L267 750L246 771L225 750Z" fill="#F2B705" fill-opacity="0.5"/><path d="M233 642L254 663L233 684L212 663Z" fill="#F2B705" fill-opacity="0.5"/><path d="M230 554L251 575L230 596L209 575Z" fill="#F2B705" fill-opacity="0.5"/><path d="M239 466L260 487L239 508L218 487Z" fill="#F2B705" fill-opacity="0.5"/><path d="M258 380L279 401L258 422L237 401Z" fill="#F2B705" fill-opacity="0.5"/><path d="M287 297L308 318L287 339L266 318Z" fill="#F2B705" fill-opacity="0.5"/><path d="M326 218L347 239L326 260L305 239Z" fill="#F2B705" fill-opacity="0.5"/><path d="M374 144L395 165L374 186L353 165Z" fill="#F2B705" fill-opacity="0.5"/><path d="M431 76L452 97L431 118L410 97Z" fill="#F2B705" fill-opacity="0.5"/><path d="M495 16L516 37L495 58L474 37Z" fill="#F2B705" fill-opacity="0.5"/><path d="M566 -36L587 -15L566 6L545 -15Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1321 -55L1342 -34L1321 -13L1300 -34Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1395 -7L1416 14L1395 35L1374 14Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1463 50L1484 71L1463 92L1442 71Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1523 114L1544 135L1523 156L1502 135Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1575 185L1596 206L1575 227L1554 206Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1618 262L1639 283L1618 304L1597 283Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1651 344L1672 365L1651 386L1630 365Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1674 429L1695 450L1674 471L1653 450Z" fill="#F2B705" fill-opacity="0.5"/><path d="M1687 516L1708 537L1687 558L1666 537Z" fill="#F2B705" fill-opacity="0.5"/><circle cx="960" cy="600" r="920" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M1879 619L1903 643L1879 667L1855 643Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1869 720L1893 744L1869 768L1845 744Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1847 819L1871 843L1847 867L1823 843Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1815 915L1839 939L1815 963L1791 939Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1773 1007L1797 1031L1773 1055L1749 1031Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1720 1094L1744 1118L1720 1142L1696 1118Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M180 1064L204 1088L180 1112L156 1088Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M131 975L155 999L131 1023L107 999Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M92 882L116 906L92 930L68 906Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M64 784L88 808L64 832L40 808Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M46 684L70 708L46 732L22 708Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M40 583L64 607L40 631L16 607Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M45 482L69 506L45 530L21 506Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M61 382L85 406L61 430L37 406Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M88 284L112 308L88 332L64 308Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M125 190L149 214L125 238L101 214Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M172 100L196 124L172 148L148 124Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M230 17L254 41L230 65L206 41Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M296 -60L320 -36L296 -12L272 -36Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1649 -34L1673 -10L1649 14L1625 -10Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1712 46L1736 70L1712 94L1688 70Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1766 132L1790 156L1766 180L1742 156Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1810 223L1834 247L1810 271L1786 247Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1843 319L1867 343L1843 367L1819 343Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1866 417L1890 441L1866 465L1842 441Z" fill="#FF4FA3" fill-opacity="0.5"/><path d="M1878 518L1902 542L1878 566L1854 542Z" fill="#FF4FA3" fill-opacity="0.5"/><circle cx="960" cy="600" r="1130" fill="none" stroke="#FF4FA3" stroke-opacity="0.45" stroke-width="2"/><path d="M-3 -18L24 9L-3 36L-30 9Z" fill="#2B0F3A" fill-opacity="0.5"/><path d="M1915 -32L1942 -5L1915 22L1888 -5Z" fill="#2B0F3A" fill-opacity="0.5"/><circle cx="960" cy="600" r="22" fill="#F2B705"/><circle cx="960" cy="600" r="10" fill="#2B0F3A"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-label="Fascia decorativa a punto croce" viewBox="0 0 1920 56" id="e0-ewvypl" style="position:absolute; bottom:0; left:0; width:1920px; height:56px"><defs><pattern id="pc23" width="56" height="56" patternUnits="userSpaceOnUse"><rect width="56" height="56" fill="#2B0F3A"/><path d="M28 6 L50 28 L28 50 L6 28 Z" fill="none" stroke="#F2B705" stroke-width="4"/><path d="M28 18 L38 28 L28 38 L18 28 Z" fill="#FF4FA3"/></pattern></defs><rect width="1920" height="56" fill="url(#pc23)"/></svg>
+  <div id="e1-ewvypl" style="position:absolute; top:0; right:0; bottom:0; left:0; display:flex; flex-direction:column; justify-content:space-between; padding:128px 128px 160px">
+    <div style="display:flex; flex-direction:column; gap:16px">
+      <p style="width:747px; font-family:'Reem Kufi', Arial, sans-serif; font-size:96px; font-weight:700; line-height:1.1; text-align:right; color:#2b0f3a">رنين</p>
+      <h2 style="font-family:Archivo, Arial, sans-serif; font-size:220px; font-weight:900; line-height:0.9; letter-spacing:-8px; text-transform:uppercase; color:#faf0e4">Ranin</h2>
+      <p style="font-family:'Instrument Serif', Georgia, serif; font-size:64px; font-style:italic; line-height:1.1; color:#ffffff">Every voice handed down grows.</p>
+    </div>
+    <div style="display:flex; flex-direction:row; align-items:end; justify-content:space-between">
+      <div style="display:flex; flex-direction:column; gap:8px">
+        <p style="font-family:'Reem Kufi', Arial, sans-serif; font-size:40px; font-weight:700; line-height:1.2; color:#2b0f3a">سارة عمارة</p>
+        <p style="font-family:Archivo, Arial, sans-serif; font-size:28px; line-height:1.5; color:#ffe9f3">Sara Emara · author and director<br>saraemara.de@gmail.com<br>(+39) 3349294768</p>
+      </div>
+    </div>
+  </div>
+</section></div>
+</div><div id="hint">Rotate your phone to landscape to see the slide full screen.</div>
+<div id="hud"><button id="prev">‹</button><span id="n"></span><button id="next">›</button><button id="snd">Audio: on</button><button id="fs">Fullscreen</button></div>
+<script>
+const wrap=document.getElementById('wrap'),st=document.getElementById('stage'),sl=[...document.querySelectorAll('.sl')];
+let i=0,sound=true,unlocked=false;
+function unlock(){if(unlocked)return;unlocked=true;sl[i].querySelectorAll('video').forEach(v=>{v.muted=!(sound&&v.dataset.snd)})}
+function fit(){const W=wrap.clientWidth,H=wrap.clientHeight;document.body.classList.toggle('pt',H>W);const k=Math.min(W/1920,H/1080);st.style.transform='translate('+(-960*k)+'px,'+(-540*k)+'px) scale('+k+')'}
+addEventListener('resize',fit);fit();
+function show(n){
+ i=Math.max(0,Math.min(sl.length-1,n));
+ sl.forEach((s,k)=>{s.classList.toggle('on',k===i);s.querySelectorAll('video').forEach(v=>{
+  if(k===i){v.currentTime=0;v.muted=!(unlocked&&sound&&v.dataset.snd);v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}else{v.pause()}})});
+ document.getElementById('n').textContent=(i+1)+' / '+sl.length;history.replaceState(null,'','#'+(i+1));
+}
+
+document.getElementById('snd').onclick=e=>{unlock();sound=!sound;e.target.textContent='Audio: '+(sound?'on':'off');sl[i].querySelectorAll('video').forEach(v=>v.muted=!(sound&&v.dataset.snd))};
+const fs=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
+document.getElementById('fs').onclick=fs;
+if(!document.documentElement.requestFullscreen)document.getElementById('fs').style.display='none';
+document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);
+addEventListener('orientationchange',()=>setTimeout(fit,200));
+addEventListener('pointerdown',unlock);
+addEventListener('keydown',e=>{unlock();
+ if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}
+ else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
+ else if(e.key==='Home')show(0);else if(e.key==='End')show(sl.length-1);else if(e.key==='f'||e.key==='F')fs();
+});
+st.addEventListener('click',e=>{const r=st.getBoundingClientRect();show(e.clientX-r.left<r.width*0.3?i-1:i+1)});
+let t0=null;addEventListener('touchstart',e=>t0=e.touches[0].clientX);addEventListener('touchend',e=>{if(t0===null)return;const dx=e.changedTouches[0].clientX-t0;if(Math.abs(dx)>50)show(i+(dx<0?1:-1));t0=null});
+show(0);
+</script></body></html>
